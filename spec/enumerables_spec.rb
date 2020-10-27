@@ -136,6 +136,10 @@ describe Enumerable do
     end
   end
 
-  describe ""
+  describe '#my_multiply_els' do
+
+  it "my_multiply_els will multiply the elements of an array and returns a value" do
+    expect(arr.my_multiply_els) { |n| n * n }.to eql(24)
+  end
   
 end
