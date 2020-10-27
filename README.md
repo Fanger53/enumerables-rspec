@@ -56,11 +56,11 @@ You will need to execute the Rspec command into the folder where u have the enum
 
 ## 👥 Authors
 
-👤 **Steven Jack Chung**
+👤 **Jenny Cárdenas**
 
-- GitHub: [@jcy2704](https://github.com/jcy2704)
-- Twitter: [@yiak_](https://twitter.com/yiak_)
-- LinkedIn: [Steven Jack Chung](https://linkedin.com/in/stevenjchung)
+- GitHub: [@janis_jenny](https://github.com/janis-jenny)
+- Twitter: [@janis_jenny](https://twitter.com/janis_jenny)
+- LinkedIn: [Jenny Càrdenas](https://www.linkedin.com/in/paolajenny)
 
 👤 **David Leonardo**
 
@@ -72,9 +72,8 @@ You will need to execute the Rspec command into the folder where u have the enum
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/jcy2704/oop_ruby/issues).
+Feel free to check the [issues page](https://github.com/Fanger53/enumerables-rspec/issues).
 
 ## ⭐ Show your support
 
 Give a ⭐️ if you like this project!
-
