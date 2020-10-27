@@ -110,4 +110,26 @@ describe Enumerable do
     end
   end
 
+  describe '#my_map' do
+    it "returns a new array with the result of running block" do
+      expect(arr.my_map {| n | n * 2 }).to eql([2, 4, 6, 8])
+    end
+
+    it "If no block is given, an enumerator is returned instead" do
+      expect(arr.map).to be_an Enumerator
+    end
+  end
+
+  describe '#my_inject' do
+    it "returns the sum of all elements into array" do
+      expect(arr.my_inject { |sum, n| sum + n }  ).to eql(10)
+    end
+
+    it "find the longest word in array" do
+      expect(str.inject do |memo, word|
+        memo.length > word.length ? memo : word
+     end).to eql("Mouse")
+    end
+  end
+  
 end
