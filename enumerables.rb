@@ -1,4 +1,4 @@
-# rubocop:disable Metrics/ModuleLength, Metrics/MethodLength, Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Style/DoubleNegation, Metrics/BlockNesting, Metrics/AbcSize, Style/AndOr
+# rubocop:disable Metrics/ModuleLength, Metrics/MethodLength, Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Style/DoubleNegation, Metrics/BlockNesting
 # module
 module Enumerable
   # Each methods
@@ -251,4 +251,4 @@ module Enumerable
   end
 end
 
-# rubocop:enable Metrics/ModuleLength, Metrics/MethodLength, Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Style/DoubleNegation, Metrics/BlockNesting, Metrics/AbcSize, Style/AndOr
+# rubocop:enable Metrics/ModuleLength, Metrics/MethodLength, Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Style/DoubleNegation, Metrics/BlockNesting
