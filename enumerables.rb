@@ -1,5 +1,5 @@
 # rubocop:disable Metrics/ModuleLength, Metrics/MethodLength, Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Style/DoubleNegation, Metrics/BlockNesting
-
+# module
 module Enumerable
   # Each methods
   def my_each
@@ -246,8 +246,7 @@ module Enumerable
   end
 
   # my_multiply_els Method
-  def multiply_els(arg)
+  def my_multiply_els(arg)
     arg.my_inject { |sum, n| sum * n }
   end
 end
-
