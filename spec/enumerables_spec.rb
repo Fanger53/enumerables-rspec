@@ -11,20 +11,19 @@ describe Enumerable do
 
   describe '#my_each' do
     it 'pass for each value of array and multiply by 2' do
-      arr.my_each { |n| ans << n * 2}
+      arr.my_each { |n| ans << n * 2 }
       expect(ans).to eql([2, 4, 6, 8])
     end
 
     it 'my_each pass for all the strings values' do
-      str.my_each { |n| ans << n}
+      str.my_each { |n| ans << n }
       expect(ans).to eql(%w[Dog Cat Mouse])
     end
 
     it 'if no block is given, returns an enumerator' do
-      ans.my_each { |n| ans << n.empty?}
+      ans.my_each { |n| ans << n.empty? }
       expect(ans).to eql([])
     end
-
   end
 
   describe '#my_each_with_index' do
@@ -63,7 +62,6 @@ describe Enumerable do
   end
 
   describe '#my_any?' do
-
     it 'my_any returns true if there is one elemente that meets the condition' do
       expect(str.my_any? { |word| word.length >= 3 }).to be true
     end
@@ -104,13 +102,12 @@ describe Enumerable do
 
   describe '#my_map' do
     it 'returns a new array with the result of running block' do
-      expect(arr.my_map {| n | n * 2 }).to eql([2, 4, 6, 8])
+      expect(arr.my_map { |n| n * 2 }).to eql([2, 4, 6, 8])
     end
 
     it 'If no block is given, an enumerator is returned instead' do
       expect(arr.my_map).to be_an Enumerator
     end
-     
     it 'returns a simbol in every hash element with the value' do
       expect(my_hash.my_map { |key, value| [key.to_sym, value] }).to eql([[:cat, 0], [:dog, 1], [:wombat, 2]])
     end

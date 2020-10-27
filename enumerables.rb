@@ -1,4 +1,4 @@
-# rubocop:disable Metrics/ModuleLength, Metrics/MethodLength, Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Style/DoubleNegation, Metrics/BlockNesting
+# rubocop:disable Metrics/ModuleLength, Metrics/MethodLength, Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Style/DoubleNegation, Metrics/BlockNesting, Metrics/AbcSize, Style/AndOr
 # module
 module Enumerable
   # Each methods
@@ -250,3 +250,5 @@ module Enumerable
     arg.my_inject { |sum, n| sum * n }
   end
 end
+
+# rubocop:enable Metrics/ModuleLength, Metrics/MethodLength, Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity, Style/DoubleNegation, Metrics/BlockNesting, Metrics/AbcSize, Style/AndOr
