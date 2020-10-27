@@ -244,5 +244,10 @@ module Enumerable
     end
     new_array
   end
+
+  # my_multiply_els Method
+  def multiply_els(arg)
+    arg.my_inject { |sum, n| sum * n }
+  end
 end
 

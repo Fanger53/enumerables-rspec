@@ -116,7 +116,11 @@ describe Enumerable do
     end
 
     it "If no block is given, an enumerator is returned instead" do
-      expect(arr.map).to be_an Enumerator
+      expect(arr.my_map).to be_an Enumerator
+    end
+     
+    it "returns a simbol in every hash element with the value" do
+      expect(my_hash.my_map { |key, value| [key.to_sym, value] }).to eql([[:cat, 0], [:dog, 1], [:wombat, 2]])
     end
   end
 
@@ -131,5 +135,7 @@ describe Enumerable do
      end).to eql("Mouse")
     end
   end
+
+  describe ""
   
 end
