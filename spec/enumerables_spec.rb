@@ -1,3 +1,4 @@
+# rubocop:disable Style/EvenOdd
 require './enumerables'
 
 describe Enumerable do
@@ -92,7 +93,7 @@ describe Enumerable do
       expect(arr.my_count { |n| n }).to eql(4)
     end
     it 'my_count will count the elements that meet the condition in a block given' do
-      expect((arr.my_count &:even?)).to eql(2)
+      expect(arr.my_count { |n| n % 2 == 0 }).to eql(2)
     end
 
     it 'if no block is given returns the length of an array' do
@@ -125,3 +126,5 @@ describe Enumerable do
     end
   end
 end
+
+# rubocop:enable Style/EvenOdd
