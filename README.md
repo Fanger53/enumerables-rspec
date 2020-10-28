@@ -7,7 +7,7 @@
 <h1 align="center">Enumerables Rspec</h1>
 
 <p align="center">
-  <strong>Project created by  and David Leonardo Castillo</strong>
+  <strong>Project created by Jenny Cárdenas and David Leonardo Castillo</strong>
   <br>
   It was based on the project in the Ruby Module in Microverse
 </p>
