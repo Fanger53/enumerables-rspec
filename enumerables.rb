@@ -37,56 +37,26 @@ module Enumerable
   end
 
   # my_all Method
-  def my_all?(type = nil)
-    if block_given? and type.nil?
-      flag = true
-      my_each do |n|
-        if n.is_a?(String)
-          flag = false unless yield(n)
-        elsif n.is_a?(Numeric)
-          flag = false unless yield(n)
+  def my_all?(argument = nil)
+    index = 0
+    my = to_a
+    while index < my.length
+      if block_given?
+        return false if yield(my[index]) == false
+      else
+        if argument.nil? # when there is no argument
+          return false if my[index].nil? || my[index] == false
+        elsif argument.class == Regexp # when there is an argument
+          return false if my[index].match?(argument) != true
+        elsif argument.class == Class
+          return false if my[index].is_a?(argument) != true
+        else # when the argument is no regexp ni class
+          return false if my[index] != argument
         end
       end
-      flag
-    # Elsif for Regular Expression
-    elsif type.is_a?(Regexp)
-      my_each do |e|
-        if e.is_a?(String)
-          return false unless e.match?(type)
-        end
-      end
-      true
-    # Elsif for Class argument query
-    elsif type.is_a?(Class) and type != Numeric and !type.nil?
-      classflag = true
-      firstclass = self[0].class.name
-      my_each do |m|
-        classflag = false if m.class.name != firstclass
-      end
-      classflag = false if empty?
-      classflag
-    # Elsif for Numeric superclass query
-    elsif type == Numeric
-      classflag = true
-      my_each do |m|
-        if m.class.superclass.name != 'Numeric'
-          classflag = false
-        elsif empty?
-          classflag = false
-        end
-      end
-      classflag
-    elsif type != Numeric and type.is_a?(Numeric)
-      my_each do |m|
-        return false if m != type
-      end
-      true
-    elsif !block_given? and type.nil?
-      my_each do |m|
-        return false if m.nil? || m == false
-      end
-      true
+      index += 1
     end
+    true
   end
 
   # my_any? Method
@@ -246,8 +216,8 @@ module Enumerable
   end
 
   # my_multiply_els Method
-  def my_multiply_els(arg)
-    arg.my_inject { |sum, n| sum * n }
+  def my_multiply_els(arr)
+    arr.my_inject { |sum, n| sum * n }
   end
 end
 
